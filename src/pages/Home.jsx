@@ -1,15 +1,11 @@
 import React from "react";
-import Header from "../Header/Header";
-import Navbar from "../Header/Navbar";
-import Pizza from "./Pizza";
+import HomeSlider from "../components/HomeSlider";
+import swiperData from "../swiperData";
 
 const Home = () => {
   return (
-    <div>
-      <Header />
-      <Navbar />
-
-      <Pizza />
+    <div className="px-7">
+      <HomeSlider swiperData={swiperData} />
     </div>
   );
 };

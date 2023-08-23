@@ -34,7 +34,7 @@ export const cartSlice = createSlice({
           totalQuantity: 0,
         }
       );
-      state.totalPrice = parseInt(totalPrice.toFixed(2));
+      state.totalPrice = totalPrice;
       state.totalQuantity = totalQuantity;
     },
     removeItem: (state, action) => {

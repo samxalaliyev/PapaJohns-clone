@@ -28,9 +28,9 @@ const Modal = ({ open, setOpen }) => {
         onClick={(e) => {
           e.stopPropagation();
         }}
-        className="relative w-[620px]  mx-auto my-6"
+        className=" top-0 right-0 relative lg:w-[620px] w-full h-full lg:h-auto mx-auto my-6"
       >
-        <div className="bg-white p-5">
+        <div className="bg-white p-5 h-full">
           <div className="flex justify-between w-[500px]">
             <span className="text-4xl">Sebet</span>
             <span
