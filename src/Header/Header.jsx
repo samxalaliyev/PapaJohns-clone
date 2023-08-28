@@ -33,13 +33,14 @@ const Header = () => {
             <span className=" text-xs font-bold lg:hidden">Az</span>
           </div>
           <select className="hidden lg:block">
-            <option value="Azerbaycan">Azerbaycan</option>
-            <option value="Rus">Rus</option>
-            <option value="English">English</option>
+            <option value="az">Azerbaycan</option>
+            <option value="ru">Rus</option>
+            <option value="en">English</option>
           </select>
+
           <div className="flex flex-col items-center">
             <BiSolidUser className="lg:hidden text-3xl" />
-            <span className=" text-sm font-bold">Giriş</span>
+            <span className="lg:hidden text-sm font-bold">Giriş</span>
           </div>
           <Link className="hidden lg:block">Giris/Qeydiyat</Link>
           <div

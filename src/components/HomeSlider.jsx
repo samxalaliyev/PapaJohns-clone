@@ -2,9 +2,28 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import swiperData from "../swiperData";
 import { Autoplay, Pagination } from "swiper/modules";
+import { useEffect, useState } from "react";
 
-const HomeSlider = ({ swiperData }) => {
+const HomeSlider = () => {
+  // const useSecondImage = window.innerWidth < 768;
+  const [useSecondImage, setUseSecondImage] = useState(
+    window.innerWidth < 1024
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setUseSecondImage(window.innerWidth < 1024);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="py-10">
       <Swiper
@@ -23,7 +42,11 @@ const HomeSlider = ({ swiperData }) => {
       >
         {swiperData.map((item) => (
           <SwiperSlide className=" cursor-pointer">
-            <img src={item.img} alt={item.title} className="h-[500px]" />
+            <img
+              src={useSecondImage ? item.img2 : item.img}
+              alt={item.title}
+              className=" object-cover lg:object-fill sm:h-auto sm:w-auto lg:h-[500px]"
+            />
           </SwiperSlide>
         ))}
       </Swiper>

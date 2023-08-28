@@ -4,8 +4,8 @@ import swiperData from "../swiperData";
 
 const Home = () => {
   return (
-    <div className="px-7">
-      <HomeSlider swiperData={swiperData} />
+    <div className="sm:px-7">
+      <HomeSlider />
     </div>
   );
 };

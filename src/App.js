@@ -4,7 +4,7 @@ import Header from "./Header/Header";
 import Navbar from "./Header/Navbar";
 import Papadias from "./pages/Papadias";
 import Pizza from "./pages/Pizza";
-import { Footer } from "./components/Footer";
+import Footer from "./components/Footer";
 
 function App() {
   return (
