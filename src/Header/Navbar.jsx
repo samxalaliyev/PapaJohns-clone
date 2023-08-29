@@ -20,7 +20,7 @@ const Navbar = () => {
         <li>Desert</li>
         <li>Sous</li>
       </ul>
-      <div className="hidden lg:flex">
+      <div className="hidden xl:flex">
         <Link>0 bal</Link>
         <FaQuestion className=" bg-emerald-600 rounded-2xl ml-2 p-2 text-3xl " />
       </div>

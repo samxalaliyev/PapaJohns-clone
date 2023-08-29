@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import swiperData from "../swiperData";
 import { Autoplay, Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const HomeSlider = () => {
   // const useSecondImage = window.innerWidth < 768;
@@ -23,6 +24,11 @@ const HomeSlider = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  const navigate = useNavigate();
+
+  const getItem = (id) => {
+    navigate(`/kampains/${id}`);
+  };
 
   return (
     <div className="py-10">
@@ -41,7 +47,11 @@ const HomeSlider = () => {
         className="mySwiper"
       >
         {swiperData.map((item) => (
-          <SwiperSlide className=" cursor-pointer">
+          <SwiperSlide
+            key={item.id}
+            className=" cursor-pointer"
+            onClick={() => getItem(item.id)}
+          >
             <img
               src={useSecondImage ? item.img2 : item.img}
               alt={item.title}
