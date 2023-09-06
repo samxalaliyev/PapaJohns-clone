@@ -8,11 +8,13 @@ import {
   increaseQuantity,
   decreaseQuantity,
 } from "../redux/cartSlice.js";
+import { useTranslation } from "react-i18next";
+
 const Modal = ({ open, setOpen }) => {
   const { cart, totalQuantity, totalPrice } = useSelector(
     (state) => state.allCart
   );
-
+  const { t } = useTranslation();
   const dispatch = useDispatch();
 
   dispatch(getCartTotal());
@@ -32,18 +34,18 @@ const Modal = ({ open, setOpen }) => {
       >
         <div className="bg-white p-5 h-full">
           <div className="flex justify-between ">
-            <span className="text-4xl font-bold">Sebet</span>
+            <span className="text-4xl font-bold">{t("yourBasket")}</span>
             <span
               onClick={() => setOpen(false)}
               className=" flex items-center justify-center gap-1 cursor-pointer"
             >
-              Baga <AiFillCloseCircle className=" text-xl" />
+              {t("close")} <AiFillCloseCircle className=" text-xl" />
             </span>
           </div>
-          <p className="text-xs mt-3 mb-3 ">
-            Səbətinizdə məhsulların sayı: {totalQuantity}
+          <p className="text-xs mt-3 mb-3 flex ">
+            {t("itemsBasket")} {totalQuantity}
           </p>
-          <div className=" max-h-[400px] overflow-y-auto">
+          <div className=" max-h-[400px] overflow-y-auto px-2">
             {cart.map((data, i) => (
               <div
                 key={i}
@@ -95,10 +97,10 @@ const Modal = ({ open, setOpen }) => {
 
           <div className="text-center flex-wrap-reverse flex justify-between mt-6 items-center">
             <p className=" m-auto lg:m-0 bg-red-700 text-white px-12 py-2 rounded uppercase ">
-              SİFARİŞİ GÖNDƏR
+              {t("checkout")}
             </p>
-            <div className="text-lg w-full lg:w-auto font-bold">
-              Ümumi məbləğ: <span>{totalPrice}</span> M
+            <div className="text-lg w-full lg:w-auto font-bold after:content-['\20BC']">
+              {t("totalAmount")} <span>{totalPrice} </span>
             </div>
           </div>
         </div>

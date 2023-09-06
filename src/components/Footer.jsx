@@ -4,8 +4,11 @@ import { BsTwitter } from "react-icons/bs";
 import { FaTripadvisor } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-red-800 flex flex-wrap p-8  lg:flex-nowrap lg:justify-between lg:items-center lg:h-20 lg:px-12 text-white">
       <div className=" flex  text-base font-bold w-full items-center leading-10 text-center ">
@@ -14,15 +17,15 @@ export const Footer = () => {
         </div>
 
         <ul className=" flex flex-col lg:flex-row  items-center lg:gap-2  w-full  ">
-          <li>Haqqımızda</li>
-          <li>Sual-Cavab</li>
-          <li>Karyera</li>
-          <li>Xəmir</li>
-          <li> Papa Talk - Şərtlər və Qaydalar</li>
+          <li>{t("about")}</li>
+          <li>{t("faq")}</li>
+          <li>{t("career")}</li>
+          <li>{t("dough")}</li>
+          <li> {t("papaTalk")}</li>
         </ul>
         <ul className="lg:hidden h-full flex flex-col lg:flex-row w-full ">
-          <li>Restoranlar</li>
-          <li>Kampaniyalar</li>
+          <li>{t("restaurant")}</li>
+          <li>{t("offer")}</li>
           <li>PapaBonus</li>
         </ul>
       </div>
