@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import producData from "../producData";
+import { toast } from "react-toastify";
 
 const initialState = {
   cart: [],
@@ -7,7 +8,7 @@ const initialState = {
   totalQuantity: 0,
   totalPrice: 0,
 };
-
+// const notify = () => toast("Səbətə əlavə olundu");
 export const cartSlice = createSlice({
   name: "cart",
   initialState,
@@ -19,6 +20,7 @@ export const cartSlice = createSlice({
       } else {
         state.cart.push(action.payload);
       }
+      toast.success("Səbətə əlavə olundu");
     },
     getCartTotal: (state) => {
       let { totalQuantity, totalPrice } = state.cart.reduce(

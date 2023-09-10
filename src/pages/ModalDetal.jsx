@@ -72,7 +72,7 @@ const ModalDetal = ({ openModal, setOpenModal, items }) => {
                   onClick={() => dispatch(addToCart(item))}
                   className=" bg-emerald-600 whitespace-nowrap max-h-10 rounded-md  p-1 px-3 cursor-pointer uppercase text-lg  text-white font-semibold"
                 >
-                  Səbətə at
+                  {t("add")}
                 </button>
                 <Basket open={open} setOpen={setOpen} />
               </div>

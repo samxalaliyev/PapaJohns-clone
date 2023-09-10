@@ -1,12 +1,12 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addToCart } from "../redux/cartSlice";
 import ModalDetal from "./ModalDetal";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Pizza = () => {
   const data = useSelector((state) => state.allCart.data);
-  const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   const [openModal, setOpenModal] = useState(false);
   const [items, setItems] = useState([]);
@@ -16,33 +16,35 @@ const Pizza = () => {
     setOpenModal(true);
   };
   return (
-    <div className="container px-16 mt-5 flex flex-wrap gap-5 ">
-      {data.map((item, i) => (
-        <div key={i} className=" w-[330px]">
-          <img
-            src={item.img}
-            alt=""
-            className=" cursor-pointer"
-            onClick={() => getItem(item)}
-          />
-          <div className="flex justify-between my-2 pr-2">
-            <span className="font-bold text-lg ">{item.title}</span>
-            <button
-              // onClick={() => dispatch(addToCart(item))}
+    <div className="lg:px-0 px-2 flex justify-center items-center">
+      <div className=" container lg:px-0 lg:mt-5 lg:flex lg:flex-wrap lg:justify-center lg:gap-x-5 my-5 flex-col items-center lg:items-start  lg:flex-row  flex  gap-5  ">
+        {data.map((item, i) => (
+          <div key={i} className="w-full flex flex-col lg:w-[330px] ">
+            <img
+              src={item.img}
+              alt=""
+              className="w-full cursor-pointer"
               onClick={() => getItem(item)}
-              className=" bg-emerald-600 whitespace-nowrap max-h-10 rounded-md  p-1 px-3 cursor-pointer uppercase text-lg  text-white font-semibold"
-            >
-              Bunu Sec
-            </button>
+            />
+            <div className="flex justify-between my-2 pr-2">
+              <span className="font-bold text-lg ">{item.title}</span>
+              <button
+                // onClick={() => dispatch(addToCart(item))}
+                onClick={() => getItem(item)}
+                className=" bg-emerald-600 whitespace-nowrap max-h-10 rounded-md  p-1 px-3 cursor-pointer uppercase text-lg  text-white font-semibold"
+              >
+                {t("select")}
+              </button>
+            </div>
+            <p>{item.describtion}</p>
+            <ModalDetal
+              items={items}
+              openModal={openModal}
+              setOpenModal={setOpenModal}
+            />
           </div>
-          <p>{item.describtion}</p>
-          <ModalDetal
-            items={items}
-            openModal={openModal}
-            setOpenModal={setOpenModal}
-          />
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

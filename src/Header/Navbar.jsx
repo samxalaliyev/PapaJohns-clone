@@ -10,7 +10,9 @@ const Navbar = () => {
   return (
     <div className="px-5 lg:px-20 h-20 flex bg-red-700 justify-center lg:justify-between items-center text-gray-50 text-xl font-extrabold uppercase">
       <ul className="flex lg:justify-between text-sm gap-2 lg:text-xl overflow-x-auto lg:overflow-hidden lg:ml-72 lg:gap-4  ">
-        <li>{t("offer")}</li>
+        <li>
+          <Link to="/offers"> {t("offer")} </Link>
+        </li>
         <li>
           <Link to="/papadias">{t("papadias")}</Link>
         </li>

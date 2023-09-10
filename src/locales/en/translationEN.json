@@ -21,5 +21,8 @@
   "itemsBasket": "Items in your basket:",
   "close": "Close",
   "checkout": "Checkout",
-  "totalAmount": "Total Amount: "
+  "totalAmount": "Total Amount: ",
+  "select": "Select",
+  "add": "Add",
+  "seeMore": "See More"
 }

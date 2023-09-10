@@ -3,11 +3,13 @@ import papadiasData from "../papadiasData";
 import { addToCart } from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
 import ModalDetal from "./ModalDetal";
+import { useTranslation } from "react-i18next";
 
 const Papadias = () => {
   const [openModal, setOpenModal] = useState(false);
   const [items, setItems] = useState([]);
 
+  const { t } = useTranslation();
   const getItem = (item) => {
     setItems([item]);
     setOpenModal(true);
@@ -32,7 +34,7 @@ const Papadias = () => {
                 onClick={() => getItem(item)}
                 className=" bg-emerald-600 whitespace-nowrap max-h-10 rounded-md  p-1 px-3 cursor-pointer uppercase text-lg  text-white font-semibold"
               >
-                Bunu Sec
+                {t("select")}
               </button>
             </div>
             <p>{item.desc}</p>
