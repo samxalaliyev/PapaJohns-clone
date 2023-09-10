@@ -35,14 +35,11 @@ const Header = ({ users }) => {
           authData.password
         );
         const user = data.user;
-        // toast.success("Qeydiyyat uğurla tamamlandı");
-        // if (user) {
-        //   setTimeout(() => {
-        //     window.location.reload();
-        //   }, 3000);
-        // }
+        toast.success("Qeydiyyat uğurla tamamlandı");
         if (user) {
-          window.location.reload();
+          setTimeout(() => {
+            window.location.reload();
+          }, 3000);
         }
       } catch (error) {
         toast.error(error.message);
@@ -56,14 +53,11 @@ const Header = ({ users }) => {
           authData.password
         );
         const user = data.user;
-        // toast.success("Giris ugurlu oldu");
-        // if (user) {
-        //   setTimeout(() => {
-        //     window.location.reload();
-        //   }, 3000);
-        // }
+        toast.success("Giris ugurlu oldu");
         if (user) {
-          window.location.reload();
+          setTimeout(() => {
+            window.location.reload();
+          }, 3000);
         }
       } catch (error) {
         toast.error(error.message);
