@@ -135,7 +135,7 @@ const Header = ({ users }) => {
           </select>
 
           {users ? (
-            <div>
+            <div className=" lg:hidden">
               {users.email ? (
                 <div className="text-sm flex flex-col">
                   {users.email}
