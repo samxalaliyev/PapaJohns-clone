@@ -64,10 +64,8 @@ export const cartSlice = createSlice({
     reloadPage: () => {
       // window.location.reload(); // Sayfayı yenile
       setTimeout(() => {
-        toast.success("Sifariş uğurla göndərildi");
-
         window.location.href = "/pizza";
-      }, 3000);
+      }, 2000);
     },
   },
 });

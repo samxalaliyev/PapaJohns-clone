@@ -11,6 +11,7 @@ import {
   reloadPage,
 } from "../redux/cartSlice.js";
 import { useTranslation } from "react-i18next";
+import { toast } from "react-toastify";
 
 const Modal = ({ open, setOpen }) => {
   const { cart, totalQuantity, totalPrice } = useSelector(
@@ -24,6 +25,9 @@ const Modal = ({ open, setOpen }) => {
   const clearCarthandle = () => {
     dispatch(reloadPage());
     dispatch(clearCart());
+    if (cart.length > 0) {
+      toast.success("Sifariş uğurla göndərildi");
+    }
   };
 
   return (
