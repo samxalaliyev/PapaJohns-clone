@@ -43,16 +43,24 @@ export const Footer = () => {
         <div>
           <ul className="flex gap-7 text-2xl ">
             <li>
-              <FaFacebookF />
+              <Link to="https://www.facebook.com/papajohns.az/">
+                <FaFacebookF />
+              </Link>
             </li>
             <li>
-              <BsTwitter />
+              <Link to="https://twitter.com/azpapajohns">
+                <BsTwitter />
+              </Link>
             </li>
             <li>
-              <AiOutlineInstagram />
+              <Link to="https://www.instagram.com/azpapajohns/">
+                <AiOutlineInstagram />
+              </Link>
             </li>
             <li>
-              <FaTripadvisor />
+              <Link to="https://www.tripadvisor.com/Restaurant_Review-g293934-d3415853-Reviews-Papa_John_s_Pizza_Azerbaijan-Baku_Absheron_Region.html">
+                <FaTripadvisor />
+              </Link>
             </li>
           </ul>
         </div>

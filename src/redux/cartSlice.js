@@ -58,6 +58,17 @@ export const cartSlice = createSlice({
         return item;
       });
     },
+    clearCart: (state) => {
+      state.cart = [];
+    },
+    reloadPage: () => {
+      // window.location.reload(); // Sayfayı yenile
+      setTimeout(() => {
+        toast.success("Sifariş uğurla göndərildi");
+
+        window.location.href = "/pizza";
+      }, 3000);
+    },
   },
 });
 
@@ -67,5 +78,7 @@ export const {
   removeItem,
   increaseQuantity,
   decreaseQuantity,
+  clearCart,
+  reloadPage,
 } = cartSlice.actions;
 export default cartSlice.reducer;

@@ -7,6 +7,8 @@ import {
   removeItem,
   increaseQuantity,
   decreaseQuantity,
+  clearCart,
+  reloadPage,
 } from "../redux/cartSlice.js";
 import { useTranslation } from "react-i18next";
 
@@ -18,6 +20,11 @@ const Modal = ({ open, setOpen }) => {
   const dispatch = useDispatch();
 
   dispatch(getCartTotal());
+
+  const clearCarthandle = () => {
+    dispatch(reloadPage());
+    dispatch(clearCart());
+  };
 
   return (
     <div
@@ -96,8 +103,11 @@ const Modal = ({ open, setOpen }) => {
           </div>
 
           <div className="text-center flex-wrap-reverse flex justify-between mt-6 items-center">
-            <p className=" m-auto lg:m-0 bg-red-700 text-white px-12 py-2 rounded uppercase ">
-              {t("checkout")}
+            <p
+              onClick={clearCarthandle}
+              className=" cursor-pointer m-auto lg:m-0 bg-red-700 text-white px-12 py-2 rounded uppercase "
+            >
+              {cart.length > 0 ? t("checkout") : "Menyuya baxın"}
             </p>
             <div className="text-lg w-full lg:w-auto font-bold after:content-['\20BC']">
               {t("totalAmount")} <span>{totalPrice} </span>
