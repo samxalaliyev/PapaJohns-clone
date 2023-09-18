@@ -24,5 +24,11 @@
   "totalAmount": "Ümumi məbləğ: ",
   "select": "Bunu seç",
   "add": "Səbətə At",
-  "seeMore": "Ətraflı Məlumat"
+  "seeMore": "Ətraflı Məlumat",
+  "signin": "Giriş",
+  "signup": "Qeydiyyat",
+  "signinAccount": "Hesaba daxil olun",
+  "createAccount": "Yeni hesab yaradın",
+  "haveAccount": "Hesabınız varsa giriş edin",
+  "logOut": "Çıxış"
 }

@@ -24,5 +24,11 @@
   "totalAmount": "Общая сумма: ",
   "select": "Выбрать",
   "add": "Добавить в корзину",
-  "seeMore": "Подробнее"
+  "seeMore": "Подробнее",
+  "signin": "Вход",
+  "signup": "Регистрация",
+  "signinAccount": "Войти",
+  "createAccount": "Создать новый аккаунт",
+  "haveAccount": "Есть аккаунт? ",
+  "logOut": "выйти"
 }

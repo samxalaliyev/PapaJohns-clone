@@ -99,7 +99,7 @@ const Header = ({ users }) => {
     <div className="h-20 px-3 lg:mb-5 flex lg:px-20 items-center lg:h-16 lg:font-bold">
       <Link to="/">
         <img
-          className="w-16 lg:w-64 lg:h-28 lg:left-16 lg:top-12 lg:absolute"
+          className="w-16 lg:w-64 lg:h-28 lg:ml-0 sm:ml-8 lg:left-16 lg:top-12 lg:absolute"
           src="https://www.papajohns.az/img/content/pj_logo_web_new.png"
           alt=""
         />
@@ -138,7 +138,7 @@ const Header = ({ users }) => {
                     onClick={logOut}
                     className=" bg-red-700 text-xs ml-1 text-white p-1 rounded"
                   >
-                    çıxış
+                    {t("logOut")}
                   </button>
                 </div>
               ) : (
@@ -169,7 +169,7 @@ const Header = ({ users }) => {
                       onClick={logOut}
                       className=" bg-red-700 text-xs ml-1 text-white p-1 rounded"
                     >
-                      çıxış
+                      {t("logOut")}
                     </button>
                   </div>
                 ) : (
@@ -222,7 +222,7 @@ const Header = ({ users }) => {
                   </span>
                 </div>
                 <div className="w-full mt-3 flex flex-col justify-center items-center">
-                  <h1>{signUp ? "Qeydiyyat" : "Hesaba daxil olun"}</h1>
+                  <h1>{signUp ? t("signup") : t("signinAccount")}</h1>
 
                   <input
                     type="text"
@@ -247,16 +247,14 @@ const Header = ({ users }) => {
                     onClick={authFunc}
                     className=" text-white mt-4 w-[80%] bg-red-800 p-2 rounded"
                   >
-                    {signUp ? "Qeydiyyat" : "Giriş"}
+                    {signUp ? t("signup") : t("signin")}
                   </button>
 
                   <button
                     onClick={() => SetsignUp(!signUp)}
                     className=" text-white mt-4 w-[80%] bg-green-800 p-1 rounded"
                   >
-                    {signUp
-                      ? "Hesabiniz varsa giris edin"
-                      : "Yeni hesab yaradin"}
+                    {signUp ? t("haveAccount") : t("createAccount")}
                   </button>
                 </div>
               </div>

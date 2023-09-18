@@ -23,10 +23,12 @@ const Modal = ({ open, setOpen }) => {
   dispatch(getCartTotal());
 
   const clearCarthandle = () => {
-    dispatch(reloadPage());
     dispatch(clearCart());
     if (cart.length > 0) {
+      dispatch(reloadPage());
       toast.success("Sifariş uğurla göndərildi");
+    } else {
+      window.location.href = "/pizza";
     }
   };
 

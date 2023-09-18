@@ -24,5 +24,11 @@
   "totalAmount": "Total Amount: ",
   "select": "Select",
   "add": "Add",
-  "seeMore": "See More"
+  "seeMore": "See More",
+  "signin": "Sign In",
+  "signup": "Sign Up",
+  "signinAccount": "Log In",
+  "createAccount": "Create a new account",
+  "haveAccount": "Have an account?",
+  "logOut": "Log out"
 }

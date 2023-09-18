@@ -13,6 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
+import ScrollTo from "./components/Scrolto";
 
 function App() {
   const [users, setUsers] = useState(null);
@@ -28,6 +29,7 @@ function App() {
     <div className="App">
       <Header users={users} />
       <Navbar />
+      <ScrollTo />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/offers" element={<Offers />} />

@@ -16,7 +16,7 @@ export const Footer = () => {
           © PJA 2023
         </div>
 
-        <ul className=" flex flex-col lg:flex-row  items-center lg:gap-2  w-full  ">
+        <ul className=" flex flex-col lg:flex-row  lg:whitespace-nowrap items-center lg:gap-2  w-full  ">
           <li>{t("about")}</li>
           <li>{t("faq")}</li>
           <li>{t("career")}</li>
