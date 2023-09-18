@@ -30,5 +30,6 @@
   "signinAccount": "Log In",
   "createAccount": "Create a new account",
   "haveAccount": "Have an account?",
-  "logOut": "Log out"
+  "logOut": "Log out",
+  "goToMenu": "Go to menu"
 }

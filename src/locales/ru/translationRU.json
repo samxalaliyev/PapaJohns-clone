@@ -30,5 +30,6 @@
   "signinAccount": "Войти",
   "createAccount": "Создать новый аккаунт",
   "haveAccount": "Есть аккаунт? ",
-  "logOut": "выйти"
+  "logOut": "выйти",
+  "goToMenu": "ПЕРЕЙТИ В МЕНЮ"
 }

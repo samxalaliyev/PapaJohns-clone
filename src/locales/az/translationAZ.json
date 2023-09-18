@@ -30,5 +30,6 @@
   "signinAccount": "Hesaba daxil olun",
   "createAccount": "Yeni hesab yaradın",
   "haveAccount": "Hesabınız varsa giriş edin",
-  "logOut": "Çıxış"
+  "logOut": "Çıxış",
+  "goToMenu": "Menyuya baxın"
 }

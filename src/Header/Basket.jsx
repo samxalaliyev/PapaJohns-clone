@@ -113,7 +113,7 @@ const Modal = ({ open, setOpen }) => {
               onClick={clearCarthandle}
               className=" cursor-pointer m-auto lg:m-0 bg-red-700 text-white px-12 py-2 rounded uppercase "
             >
-              {cart.length > 0 ? t("checkout") : "Menyuya baxın"}
+              {cart.length > 0 ? t("checkout") : t("goToMenu")}
             </p>
             <div className="text-lg w-full lg:w-auto font-bold after:content-['\20BC']">
               {t("totalAmount")} <span>{totalPrice} </span>
